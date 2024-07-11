@@ -13,8 +13,8 @@ export default {
       colors: {
         'bggray': '#F7F7F7',
         'bggrayhover': '#E8E8E8',
-        'primarycolor': "#DC2626",
-        'primarycolorhover': "#B91C1C",
+        'primarycolor': "#002038",
+        'primarycolorhover': "#667988",
       },
     },
   },

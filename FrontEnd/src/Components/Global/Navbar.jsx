@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { Link } from 'react-router-dom';
 
 const Navbar = () => {
     const [menuOpen, setMenuOpen] = useState(false);
@@ -23,15 +24,13 @@ const Navbar = () => {
         };
     }, []);
 
-    const menuItems = ['Home', 'About Us', 'Services', 'Fleet', 'News', 'Careers', 'Contact'];
-
     return (
         <>
-            <div className={  ` ${isSticky ? 'custommaxmd:fixed top-0 w-full z-50' : ''} bg-black text-white flex justify-between items-center p-4`}>
+            <div className={`${isSticky ? 'custommaxmd:fixed top-0 w-full z-50' : ''} bg-black text-white flex justify-between items-center p-4`}>
                 <div className="flex items-center">
                     <img src="https://placehold.co/40x40?text=🦅" alt="Falcon logo" className="mr-2" />
                     <div>
-                        <h1 className="text-xl font-bold">FALCON</h1>
+                        <h1 className="text-xl font-bold">Skyward Aerial</h1>
                         <p className="text-sm">Your tagline here</p>
                     </div>
                 </div>
@@ -55,11 +54,13 @@ const Navbar = () => {
                     <div className="relative flex items-center justify-between h-16">
                         <div className="flex items-center justify-center w-full">
                             <div className="flex space-x-4">
-                                {menuItems.map((item) => (
-                                    <a key={item} href="#" className={`${isSticky ? 'text-white hover:bg-gray-700' : 'text-black hover:bg-primarycolor hover:text-white'} px-3 py-2 rounded-md text-base font-semibold flex items-center`}>
-                                        {item}
-                                    </a>
-                                ))}
+                                <Link to="/" className={`${isSticky ? 'text-white hover:bg-gray-700' : 'text-black hover:bg-primarycolor hover:text-white'} px-3 py-2 rounded-md text-base font-semibold flex items-center`}>Home</Link>
+                                <Link to="/aboutpage" className={`${isSticky ? 'text-white hover:bg-gray-700' : 'text-black hover:bg-primarycolor hover:text-white'} px-3 py-2 rounded-md text-base font-semibold flex items-center`}>About Us</Link>
+                                <Link to="/services" className={`${isSticky ? 'text-white hover:bg-gray-700' : 'text-black hover:bg-primarycolor hover:text-white'} px-3 py-2 rounded-md text-base font-semibold flex items-center`}>Services</Link>
+                                <Link to="/management" className={`${isSticky ? 'text-white hover:bg-gray-700' : 'text-black hover:bg-primarycolor hover:text-white'} px-3 py-2 rounded-md text-base font-semibold flex items-center`}>Management</Link>
+                                <Link to="/fleet" className={`${isSticky ? 'text-white hover:bg-gray-700' : 'text-black hover:bg-primarycolor hover:text-white'} px-3 py-2 rounded-md text-base font-semibold flex items-center`}>Fleet</Link>
+                                <Link to="/news" className={`${isSticky ? 'text-white hover:bg-gray-700' : 'text-black hover:bg-primarycolor hover:text-white'} px-3 py-2 rounded-md text-base font-semibold flex items-center`}>News</Link>
+                                <Link to="/contact" className={`${isSticky ? 'text-white hover:bg-gray-700' : 'text-black hover:bg-primarycolor hover:text-white'} px-3 py-2 rounded-md text-base font-semibold flex items-center`}>Contact</Link>
                             </div>
                         </div>
                     </div>
@@ -78,11 +79,13 @@ const Navbar = () => {
                             </button>
                         </div>
                         <div className="px-2 pt-2 pb-3 space-y-1">
-                            {menuItems.map((item) => (
-                                <a key={item} href="#" className="text-white hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium flex items-center">
-                                    {item}
-                                </a>
-                            ))}
+                            <Link to="/" className="text-white hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium flex items-center">Home</Link>
+                            <Link to="/aboutpage" className="text-white hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium flex items-center">About Us</Link>
+                            <Link to="/services" className="text-white hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium flex items-center">Services</Link>
+                            <Link to="/management" className="text-white hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium flex items-center">Management</Link>
+                            <Link to="/fleet" className="text-white hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium flex items-center">Fleet</Link>
+                            <Link to="/news" className="text-white hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium flex items-center">News</Link>
+                            <Link to="/contact" className="text-white hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium flex items-center">Contact</Link>
                         </div>
                     </div>
                 </>
